@@ -117,7 +117,7 @@ $("#pager-holder").neo_pager({
 ```
 	
 	
-##Options you can use when you creating the plugin
+##Options you can use when you are creating instance from the plugin
 
 ```
 pageClass: "page", // class selector for all pages
@@ -140,6 +140,7 @@ onPageOut: null, // event when page become inactive
 onScroll: null, // event on page scroll
 onAutoScrollStart: null, // event after auto scroll start
 onAutoScrollEnd: null, // event after auto scroll end
-useDefaultCss: false, // if true, plugin css will be created
-hintClass: "hint--left hint--rounded hint--page" // classes that describe hint side position, how hint will be shown, and hint style
+useDefaultCss: false, // if true, plugin css will be auto created
+hintClass: "hint--left hint--rounded hint--page", // classes that describe hint side position, how hint will be shown, and hint style
+addHintStyle: true // if true it will auto generate hint css classes and styles
 ```
