@@ -1,19 +1,27 @@
 # neo-pager
 jQuery based plugin that can be use for creating web-sections (pages) and possibility to scroll or jump through pages
 
-Plugin that enable you to create web page sections and it will auto create dots (if set in options) for navigation, it support scroll animations and so one...
+Plugin that enable you to create web page sections and it will auto create dots (if set in options) for navigation.
+- It support scroll animations.
+- You can use custom buttons, menu buttons or any type of page notification, to achive that you can
+use supported pager plugin methods.
 - You can disable the dots and use your custom navigation.
-- For more about the plugin construction see the HINT points!
+- Pages can be with any height
+- You can control the scroll up or down offset
+- It will auto connect dots with pages and vise-versa
+- It is fully responsive
+For more about the plugin construction see the explanation parts below.
 
 
-##HINT 1:
-To show hint on dot you need to add the attribute: data-hint-text
+##How to define html structure
 
-- example html structure:
+- To show hint on dot you need to add attribute: data-hint-text
+- To show text by dots you need to add attribute: data-dot-text
+
 ```
 <div id="pager-holder">
 <div class="block1 height-block page" data-hint-text="Some help text"></div>
-<div class="block2 height-block page"></div>
+<div class="block2 height-block page" data-dot-text="Page 2"></div>
 <div class="block3 height-block page"></div>
 <div class="block4 height-block page"></div>
 <div class="block5 height-block page"></div>
@@ -21,7 +29,8 @@ To show hint on dot you need to add the attribute: data-hint-text
 </div>
 ```
 	
-##HINT 2:
+##Example css style for the dots and the hint
+
 If you want to style the dots and hint this is the best way how to do it!
 - In this example the id's and classes names are the plugin default.
 	
@@ -94,8 +103,8 @@ If you want to style the dots and hint this is the best way how to do it!
 ```
 
 	
-##HINT 3:
-To create the pager you do it like this: (by HINT 1 html structure)
+##How to create Pager
+To create the pager you do it like this: (by the first html example structure)
 ```
 // without all default options
 $("#pager-holder").neo_pager();
@@ -108,8 +117,7 @@ $("#pager-holder").neo_pager({
 ```
 	
 	
-##HINT 4:
-Options you can use when you creating the plugin
+##Options you can use when you creating the plugin
 
 ```
 pageClass: "page", // class selector for all pages
